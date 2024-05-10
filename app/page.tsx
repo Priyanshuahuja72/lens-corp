@@ -1,113 +1,291 @@
+"use client";
+import React, { useState } from "react";
+import styles from "./Custom/MyComponent.module.css"
+import Hero from "./components/Hero";
 import Image from "next/image";
+import teamImg from "../public/image/team-image.png";
+import Card from "./components/Card";
+import TrueAI from "./components/TrueAI";
+import TickIcon from "./components/TickIcon";
+import AICard from "./components/AICard";
+import Vision from "./components/Vision";
+import Map from "../public/image/Map.webp"
+import Footer from "./components/Footer";
 
-export default function Home() {
+const CardData = [
+  {
+    CardNumber: "1",
+    heading: "Biometrics",
+    CardContent:
+      "Academia-backed & In-house researched State-of-the-Art Face, Fingerprint, and Iris Recognition SDKs. Enable real-time automated Biometric applications on edge devices even without an active internet connection.",
+    CardColor: "#01C99B",
+  },
+  {
+    CardNumber: "2",
+    heading: "Image Analysis",
+    CardContent:
+      "Outsource the overly complex image analysis work to our intelligent machines that adaptively learn, so you can focus on making the best decisions for your business.",
+    CardColor: "#3FBDF1",
+  },
+  {
+    CardNumber: "3",
+    heading: "Cross-Media Translation",
+    CardContent:
+      "Academia-backed & In-house researched State-of-the-Art Face, Fingerprint, and Iris Recognition SDKs. Enable real-time automated Biometric applications on edge devices even without an active internet connection.",
+    CardColor: "#FF605F",
+  },
+  {
+    CardNumber: "4",
+    heading: "3D Modelling and Design.",
+    CardContent:
+      "We offer services for automated generation of 3D assets with realistic shapes and textures. We animate the 3D models with voice and videos with an aim to retarget voice and/or expressions with pose from a single Image/video.",
+    CardColor: "#FF9F31",
+  },
+];
+const Home = () => {
+  const [hover, setHover] = useState(false);
+  
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <Hero />
+      <div className="mt-[40px]">
+        <h1 className="text-center text-[70px] font-semibold">About Us</h1>
+        <div
+          className="w-40 h-2 rounded-full bg-gradient-to-r mx-auto"
+          style={{
+            backgroundImage: `linear-gradient(54deg, #0091ff, #9cfeff)`,
+          }}
+        ></div>
+        {/* the cart div comes here */}
+        <div className={`my-[30px] mx-[60px] ${styles.MainCart428}`}>
+          {/* this is the entire div */}
+          <div 
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          className={`transition-all duration-200 ease-in-out flex xl:flex-row lg:flex-col  lg:items-center md:flex-col md:items-center w-[90%] mx-auto bg-[#1b1c1e] p-[40px] rounded-xl ${styles.flexAt248} ${hover ? 'transform scale-105 transition-all duration-200 ease-in-out': ''}`}>
+            {/*--left-section---*/}
+            <div className={`w-[80%] text-center md:w-[100%] ${styles.welComeAt428}`}>
+              <div className={`w-[70%] lg:mx-auto md:w-[100%] ${styles.welComeAt428}`}>
+                <h1 className="text-primary-color text-4xl font-extrabold mb-8">
+                  Welcome to LENS
+                </h1>
+              </div>
+              <div className={`w-[80%] mb-[30px] md:mx-auto md:w-[100%] ${styles.welComeAt428}`}>
+                <span className="text-aboutPara text-[1rem] font-light mt-1 opacity-80 p-1 w-3/4 leading-loose">
+                  We put our hearts, souls and sweat into designing and
+                  developing custom AI - powered solutions for your business so
+                  you don't have to.
+                </span>
+              </div>
+              <button className="px-[20px] py-[30px]">Learn More</button>
+            </div>
+            {/* --right-section---*/}
+            <div className={` bg-white p-4 rounded-lg max-h-[100%] w-[55%] md:w-[100%] ${styles.welComeAt428}`}>
+              <Image
+                alt="Team-Image"
+                src={teamImg}
+                className={`w-[450px] h-[351px] md:w-[100%] rounded-10 transition duration-300 ease-in-out overflow-hidden object-cover rounded-[20px]`}
+              />
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* this is the sevices section */}
+      <div className="mt-[50px]">
+        <h1 className="text-center text-[30px] font-semibold">SERVICES</h1>
+        <div
+          className="w-20 h-2 rounded-full bg-gradient-to-r mx-auto"
+          style={{
+            backgroundImage: `linear-gradient(54deg, #0091ff, #9cfeff)`,
+          }}
+        ></div>
+        {/* the para testing */}
+        <div className="w-[70%] ml-auto mr-auto text-center md:w-[100%]">
+          <p className="my-[80px] mx-auto text-center text-5xl font-medium">
+            We provide Artificial Intelligence Services
+          </p>
+        </div>
+        {/* Now this is the card section */}
+        <div className={`xl:mx-[250px] lg:mx-[80px] grid xl:grid-cols-2 grid-rows-2 gap-x-12 gap-y-12 md:mx-[100px] md:grid-cols-1 md:grid-rows-1 ${styles.gridAt428}`}>
+          {CardData.map((CardItem, id) => (
+            <Card
+              CardNumber={CardItem.CardNumber}
+              CardHeading={CardItem.heading}
+              CardContent={CardItem.CardContent}
+              CardColor={CardItem.CardColor}
+              key={id}
+            />
+          ))}
+        </div>
+        {/* Meet truAI section */}
+        <TrueAI />
+        {/* Why Choose Lens */}
+        <section>
+          <div className="text-center">
+            {/* heading section */}
+            <div className="mb-[20px]">
+              <div className="text-[#fff] text-center text-[20px] font-semibold tracking-wider uppercase">
+                WHY CHOOSE LENS
+              </div>
+              <div
+                className="w-20 h-[4px] rounded-full bg-gradient-to-r mx-auto"
+                style={{
+                  backgroundImage: `linear-gradient(54deg, #0091ff, #9cfeff)`,
+                }}
+              ></div>
+            </div>
+            {/* content heading section */}
+            <div className="xl:w-[56%] lg:w-[90%] mx-auto">
+              <div className={`text-[#fff] text-center text-[60px] font-medium leading-normal mb-0 ${styles.fontAt428}`}>
+                AI-driven solutions backed by science
+              </div>
+              {/* content para */}
+              <p className="text-[#8a8a8a] text-center text-[20px] leading-normal mb-[2rem]">
+                Every piece of AI technology shipped from LENS is thoroughly
+                benchmarked via rigorous evaluations. With a global network of
+                experts and academicians, we guarantee the most accurate and
+                robust solutions in the market.
+              </p>
+              {/* list section */}
+              <div className={`flex items-center justify-around w-[80%] mx-auto ${styles.flexAt248}`}>
+                {/* first list */}
+                <div>
+                  <ul>
+                    <li className="flex items-center mb-[20px]">
+                      <div className="mr-[10px]">
+                        <TickIcon />
+                      </div>
+                      <div className="text-[20px]">
+                        State-of-the-art solutions
+                      </div>
+                    </li>
+                    <li className="flex items-center mb-[20px]">
+                      <div className="mr-[10px]">
+                        <TickIcon />
+                      </div>
+                      <div className="text-[20px]">Fast & Efficient</div>
+                    </li>
+                    <li className="flex items-center mb-[20px]">
+                      <div className="mr-[10px]">
+                        <TickIcon />
+                      </div>
+                      <div className="text-[20px]">
+                        No extra computation fee
+                      </div>
+                    </li>
+                    <li className="flex items-center mb-[20px]">
+                      <div className="mr-[10px]">
+                        <TickIcon />
+                      </div>
+                      <div className="text-[20px]">No licensing fee</div>
+                    </li>
+                  </ul>
+                </div>
+                {/* second list */}
+                <div>
+                  <ul>
+                    <li className="flex items-center mb-[20px]">
+                      <div className="mr-[10px]">
+                        <TickIcon />
+                      </div>
+                      <div className="text-[20px]">
+                        Lifetime support & upgrades
+                      </div>
+                    </li>
+                    <li className="flex items-center mb-[20px]">
+                      <div className="mr-[10px]">
+                        <TickIcon />
+                      </div>
+                      <div className="text-[20px]">Plug-and-Play</div>
+                    </li>
+                    <li className="flex items-center mb-[20px]">
+                      <div className="mr-[10px]">
+                        <TickIcon />
+                      </div>
+                      <div className="text-[20px]">
+                        24x7 Progress Monitoring
+                      </div>
+                    </li>
+                    <li className="flex items-center mb-[20px]">
+                      <div className="mr-[10px]">
+                        <TickIcon />
+                      </div>
+                      <div className="text-[20px]">Incremental Updates</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* driven Card section */}
+        <section className="mt-[80px]">
+          <div className="xl:mx-[50px] lg:mx-[20px] flex flex-wrap justify-center">
+            {/* here the Card comes */}
+            <AICard />
+            <AICard />
+            <AICard />
+            <AICard />
+          </div>
+        </section>
+        {/* our Vision Section */}
+        <section className="mt-[80px]">
+          <div className="text-center">
+            {/* heading section */}
+            <div className="text-[30px] font-[600] leading-normal uppercase">
+              Our Vision
+            </div>
+            <div
+              className="w-20 h-[4px] rounded-full bg-gradient-to-r mx-auto"
+              style={{
+                backgroundImage: `linear-gradient(54deg, #0091ff, #9cfeff)`,
+              }}
+            ></div>
+            {/* AI for Social Good */}
+            <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-[30px]">
+              AI for Social Good
+            </div>
+            {/* paragraph section */}
+            <p className="text-[#8a8a8a] text-center text-[25px] leading-normal my-16 xl:w-[60%] lg:w-[100%] mx-auto">
+              Explainable AI (XAI) is an emerging subject of machine learning
+              research that refers to strategies that try to provide
+              transparency to typically opaque AI models and their predictions.
+            </p>
+          </div>
+          <div className="w-[80%] ml-auto">
+            <Vision />
+          </div>
+        </section>
+        {/* Get in Touch */}
+        <section className="mt-[100px]">
+          <div className={`flex xl:items-center xl:flex-row lg:flex-col md:flex-col md:items-center ${styles.flexAt248}`}>
+            <div className={`bg-[#1b1c1e] pt-[5rem] pr-[5rem] pb-[7rem] pl-[5rem] ${styles.paddingAt428}`}>
+              <div>
+                <div className="mb-[40px]">
+                  <h2 className={`text-[64px] w-[80%] font-semibold leading-none ${styles.fontAt428}`}>Get in touch with us</h2>
+                </div>
+                <p className="text-[18px] mb-[40px]">Send your enquiry now!</p>
+              </div>
+              {/* input section */}
+              <div className="bg-[#0b0b0b] rounded-[26px] px-[10px] py-[10px] flex justify-center">
+                <input type="text" placeholder="Enter Your Email" className="w-[80%] px-[8px] py-[8px] text-[14px] border-[1px] border-solid border-transparent bg-[#000]" />
+                <button className="px-4 py-2 text-base font-medium rounded-full bg-blue-900 text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 cursor-pointer w-40">Request Demo</button>
+              </div>
+            </div>
+            {/* image section */}
+            <div className="lg:mx-auto lg:mt-[20px]">
+              <Image
+                src={Map}
+                alt="Map"
+              />
+            </div>
+          </div>
+        </section>
+        {/* Footer */}
+        <Footer/>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
-}
+};
+
+export default Home;
