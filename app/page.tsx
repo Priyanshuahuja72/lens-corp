@@ -74,7 +74,7 @@ const Home = () => {
                 <span className="text-aboutPara text-[1rem] font-light mt-1 opacity-80 p-1 w-3/4 leading-loose">
                   We put our hearts, souls and sweat into designing and
                   developing custom AI - powered solutions for your business so
-                  you don't have to.
+                  you do not have to.
                 </span>
               </div>
               <button className="px-[20px] py-[30px]">Learn More</button>
