@@ -13,7 +13,7 @@ const Footer = () => {
         <div className={`flex items-center xl:justify-around lg:justify-between md:justify-between ${styles.flexAt248}`}>
           <div className={`flex flex-col ${styles.alignAt428}`}>
             <Image src={LogoImage} alt="Logo" width={80} height={70} />
-            <span className="my-4">Tomorrow's Vision, Today!</span>
+            <span className="my-4">Tomorrow Vision, Today!</span>
             <div className="flex">
               <FacebookIcon />
               <InstaIcon />
