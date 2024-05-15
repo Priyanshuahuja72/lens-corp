@@ -11,37 +11,13 @@ import AICard from "./components/AICard";
 import Vision from "./components/Vision";
 import Map from "../public/image/Map.webp"
 import Footer from "./components/Footer";
-
-const CardData = [
-  {
-    CardNumber: "1",
-    heading: "Biometrics",
-    CardContent:
-      "Academia-backed & In-house researched State-of-the-Art Face, Fingerprint, and Iris Recognition SDKs. Enable real-time automated Biometric applications on edge devices even without an active internet connection.",
-    CardColor: "#01C99B",
-  },
-  {
-    CardNumber: "2",
-    heading: "Image Analysis",
-    CardContent:
-      "Outsource the overly complex image analysis work to our intelligent machines that adaptively learn, so you can focus on making the best decisions for your business.",
-    CardColor: "#3FBDF1",
-  },
-  {
-    CardNumber: "3",
-    heading: "Cross-Media Translation",
-    CardContent:
-      "Academia-backed & In-house researched State-of-the-Art Face, Fingerprint, and Iris Recognition SDKs. Enable real-time automated Biometric applications on edge devices even without an active internet connection.",
-    CardColor: "#FF605F",
-  },
-  {
-    CardNumber: "4",
-    heading: "3D Modelling and Design.",
-    CardContent:
-      "We offer services for automated generation of 3D assets with realistic shapes and textures. We animate the 3D models with voice and videos with an aim to retarget voice and/or expressions with pose from a single Image/video.",
-    CardColor: "#FF9F31",
-  },
-];
+import Button from "./components/Button";
+import CardData from "../app/data/CardData";
+// AI Image Component 
+import GreenAI from "../public/image/greenAI.webp";
+import BlueAI from "../public/image/blueAI.webp";
+import RedAI from "../public/image/redAI.webp";
+import YellowAI from "../public/image/yellowAI.webp"
 const Home = () => {
   const [hover, setHover] = useState(false);
   
@@ -77,7 +53,7 @@ const Home = () => {
                   you do not have to.
                 </span>
               </div>
-              <button className="px-[20px] py-[30px]">Learn More</button>
+             <Button text= {"Learn More"}/>
             </div>
             {/* --right-section---*/}
             <div className={` bg-white p-4 rounded-lg max-h-[100%] w-[55%] md:w-[100%] ${styles.welComeAt428}`}>
@@ -112,7 +88,8 @@ const Home = () => {
               CardNumber={CardItem.CardNumber}
               CardHeading={CardItem.heading}
               CardContent={CardItem.CardContent}
-              CardColor={CardItem.CardColor}
+              CardBorderColor={CardItem.CardBorderColor}
+              CardTextColor={CardItem.CardTextColor}
               key={id}
             />
           ))}
@@ -220,12 +197,40 @@ const Home = () => {
         </section>
         {/* driven Card section */}
         <section className="mt-[80px]">
-          <div className="xl:mx-[50px] lg:mx-[20px] flex flex-wrap justify-center">
+          <div className="xl:mx-[50px] lg:mx-[20px] flex justify-center">
             {/* here the Card comes */}
-            <AICard />
-            <AICard />
-            <AICard />
-            <AICard />
+            <AICard 
+              AIheading="Exclusive Rights"
+              AImage={GreenAI}
+              AIData="Our mission is to make an impact in empowering human society with AI. Hence, all Intellectual Property Rights belongs to you."
+              AIAnimation="animate-animate-substance-1"
+              borderColor="border-green"
+              gradient="bg-gradient-custom-green"
+            />
+            <AICard 
+            AIheading="Research Driven"
+            AImage={BlueAI}
+            AIData="We regularly benchmark our solutions via comparing industry-vide evaluations so our partners only get the best that AI can offer."
+            AIAnimation="animate-animate-substance-2"
+            borderColor="border-blue"
+            gradient="bg-gradient-custom-blue"
+            />
+            <AICard 
+             AIheading="Plug-and-Play"
+             AImage={RedAI}
+             AIData="We provide AI-driven solutions into businesses where they can bring tangible value. Each solution is customized as per your needs and deployed on any computing device of your choice."
+             AIAnimation="animate-animate-substance-3"
+             borderColor="border-red"
+             gradient="bg-gradient-custom-red"
+            />
+            <AICard 
+              AIheading="LifeTime Support"
+              AImage={YellowAI}
+              AIData="Should you face any issues, we are always at your service. We provide lifetime technical support & upgrade options."
+              AIAnimation="animate-animate-substance-4"
+              borderColor="border-yellow"
+              gradient="bg-gradient-custom-yellow"
+            />
           </div>
         </section>
         {/* our Vision Section */}

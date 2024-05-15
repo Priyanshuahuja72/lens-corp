@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import trueAImage from "../../public/image/vectorAi.webp";
 import styles from "../Custom/MyComponent.module.css"
+import Button from "./Button"
 const TrueAI = () => {
     const clipPathStyle = {
         clipPath: 'polygon(0 22.5%, 100% 0, 100% 100%, 0 100%)',
@@ -37,12 +38,12 @@ const TrueAI = () => {
             website
           </div>
           {/* fifith content */}
-          <div>
-            <button>Learn More</button>
+          <div className="mt-[20px]">
+            <Button text="Learn More"/>
           </div>
         </div>
         {/* thuird  Video */}
-        <div className={`w-[450px] md:w-[300px] ${styles.displayAt428}`}>
+        <div className={`w-[500px] md:w-[300px] ${styles.displayAt428}`}>
           <video
             className="rounded-tl-full rounded-bl-full"
             autoPlay

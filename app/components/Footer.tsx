@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={`flex justify-between bg-gray-900 py-4 px-4 ${styles.flexAt248}`}>
+      <div className={`flex justify-between bg-[#242424] py-7 px-12 ${styles.flexAt248}`}>
         <span className="text-white">2023 LENS, Inc. All rights reserved.</span>
         <div className="flex">
           <span className="text-white mr-4">Code of conduct</span>

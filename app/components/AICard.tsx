@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import GreenAI from "../../public/image/greenAI.webp";
-const AICard = () => {
+
+interface AICardProps {
+  AIheading: string;
+  AImage: any; // Assuming StaticImageData is the type for imported image
+  AIData: string;
+  AIAnimation: string;
+  borderColor: string;
+  gradient: string
+}
+
+const AICard: React.FC<AICardProps> = ({AIheading, AImage, AIData, AIAnimation, borderColor, gradient}) => {
+  const [AIhover, setAIhover] = useState(false);
   return (
-    <div className="bg-[#1b1c1e] p-[20px] rounded-[20px]  w-[335px] h-[435px] m-[10px] flex justify-between flex-col">
-      <div className="text-[1.7rem]">Exclusive Rights</div>
+    <div 
+    className={`bg-[#1b1c1e] p-[20px] rounded-[20px]  w-[335px] h-[450px] m-[10px] flex justify-between flex-col ${AIhover ? `bg-transparent ${gradient} border-[1px] ${borderColor} border-solid` : ""}`}
+    onMouseEnter={() => setAIhover(true)}
+    onMouseLeave={() => setAIhover(false)}
+    >
+      <div className="text-[1.7rem]">{AIheading}</div>
       {/* Image Section */}
-        <Image src={GreenAI} alt="GreenAi" className="w-[251px] h-[91px]" />
+      <div className="my-[20px]">
+        <Image src={AImage} alt="GreenAi" className={`w-[251px] h-[150px] ${AIhover ? "" : `animate-animate-substance-1 ${AIAnimation}`}`} />
+      </div>
       {/* conten Section */}
-      <div className=" mt-[40px] font-[100] text-gray-600 text-[20px] text-left">
-        Our mission is to make an impact in empowering human society with AI.
-        Hence, all Intellectual Property Rights belongs to you.
+      <div className=" mt-[20px] font-[100] text-gray text-[17px] text-left">
+       {AIData}
       </div>
     </div>
   );

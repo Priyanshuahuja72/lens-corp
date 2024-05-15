@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Logo from "../../public/icons/lensLogo.png";
 import { usePathname } from "next/navigation";
@@ -15,7 +15,7 @@ const Navbar = () => {
  
   return (
     <>
-    <header className="px-20 xl:py-4 lg:py-2 fixed z-20 w-full"  style={{ backdropFilter: 'blur(80px)', WebkitBackdropFilter: 'blur(80px)' }}>
+    <header className="px-20 xl:py-2 lg:py-2 fixed z-20 w-full"  style={{ backdropFilter: 'blur(80px)', WebkitBackdropFilter: 'blur(80px)' }}>
       <div className="flex items-center justify-between">
         {/* it is the image logo */}
         <Image src={Logo} alt="LensLogo" width={80} height={80} />
@@ -24,7 +24,7 @@ const Navbar = () => {
           <div>
             <Link
               href="https://makemyweb.ai/en"
-              className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-[#fff]"
+              className="text-lg font-semibold text-gray transition duration-100 hover:text-[#fff]"
             >
               MakeMyWeb
             </Link>
@@ -41,7 +41,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   href={link.href}
-                  className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-[#fff]"
+                  className="text-lg font-semibold text-gray transition duration-100 hover:text-[#fff]"
                 >
                   {link.name}
                 </Link>
