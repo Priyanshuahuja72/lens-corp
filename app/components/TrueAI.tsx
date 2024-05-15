@@ -16,7 +16,7 @@ const TrueAI = () => {
           <Image src={trueAImage} alt="TrueImage" width={330} height={330} />
         </div>
         {/* second Content */}
-        <div className="text-center xl:ml-0 lg:ml-[40px] md:ml-[30px]">
+        <div className="text-center xl:ml-0 lg:ml-[100px] md:ml-[30px]">
           {/* first content */}
           <div className={`flex text-[64px] text-white text-4xl font-bold capitalize gap-4 items-center mx-auto mb-[40px] ${styles.fontAt428} ${styles.marginAt428}`}>
             <div>Meet</div>

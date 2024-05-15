@@ -17,15 +17,15 @@ import CardData from "../app/data/CardData";
 import GreenAI from "../public/image/greenAI.webp";
 import BlueAI from "../public/image/blueAI.webp";
 import RedAI from "../public/image/redAI.webp";
-import YellowAI from "../public/image/yellowAI.webp"
+import YellowAI from "../public/image/yellowAI.webp";
+
 const Home = () => {
   const [hover, setHover] = useState(false);
-  
   return (
     <div>
       <Hero />
       <div className="mt-[40px]">
-        <h1 className="text-center text-[70px] font-semibold">About Us</h1>
+        <h1 className={`text-center text-[70px] font-semibold ${styles.textsize}`}>About Us</h1>
         <div
           className="w-40 h-2 rounded-full bg-gradient-to-r mx-auto"
           style={{
@@ -40,9 +40,9 @@ const Home = () => {
           onMouseLeave={() => setHover(false)}
           className={`transition-all duration-200 ease-in-out flex xl:flex-row lg:flex-col  lg:items-center md:flex-col md:items-center w-[90%] mx-auto bg-[#1b1c1e] p-[40px] rounded-xl ${styles.flexAt248} ${hover ? 'transform scale-105 transition-all duration-200 ease-in-out': ''}`}>
             {/*--left-section---*/}
-            <div className={`w-[80%] text-center md:w-[100%] ${styles.welComeAt428}`}>
+            <div className={`w-[80%] text-center lg:mb-8 md:mb-8 md:w-[100%] ${styles.mainWelcome}`}>
               <div className={`w-[70%] lg:mx-auto md:w-[100%] ${styles.welComeAt428}`}>
-                <h1 className="text-primary-color text-4xl font-extrabold mb-8">
+                <h1 className={`text-primary-color text-4xl font-extrabold mb-8 ${styles.lenheading}`}>
                   Welcome to LENS
                 </h1>
               </div>
@@ -60,7 +60,7 @@ const Home = () => {
               <Image
                 alt="Team-Image"
                 src={teamImg}
-                className={`w-[450px] h-[351px] md:w-[100%] rounded-10 transition duration-300 ease-in-out overflow-hidden object-cover rounded-[20px]`}
+                className={`w-[450px] lg:h-[450px] h-[351px] md:w-[100%] rounded-10 transition duration-300 ease-in-out overflow-hidden object-cover rounded-[20px]`}
               />
             </div>
           </div>
@@ -76,13 +76,13 @@ const Home = () => {
           }}
         ></div>
         {/* the para testing */}
-        <div className="w-[70%] ml-auto mr-auto text-center md:w-[100%]">
-          <p className="my-[80px] mx-auto text-center text-5xl font-medium">
+        <div className={`w-[70%] ml-auto mr-auto text-center md:w-[100%] ${styles.lenat428}`}>
+          <p className={`my-[80px] mx-auto text-center text-5xl font-medium ${styles.lenheading}`}>
             We provide Artificial Intelligence Services
           </p>
         </div>
         {/* Now this is the card section */}
-        <div className={`xl:mx-[250px] lg:mx-[80px] grid xl:grid-cols-2 grid-rows-2 gap-x-12 gap-y-12 md:mx-[100px] md:grid-cols-1 md:grid-rows-1 ${styles.gridAt428}`}>
+        <div className={`xl:mx-[250px] lg:mx-[80px] grid xl:grid-cols-2 lg:grid-cols-2 grid-rows-2 gap-x-12 gap-y-12 md:mx-[100px] md:grid-cols-1 md:grid-rows-1 ${styles.gridAt428}`}>
           {CardData.map((CardItem, id) => (
             <Card
               CardNumber={CardItem.CardNumber}
@@ -197,7 +197,7 @@ const Home = () => {
         </section>
         {/* driven Card section */}
         <section className="mt-[80px]">
-          <div className="xl:mx-[50px] lg:mx-[20px] flex justify-center">
+          <div className={`xl:mx-[50px] lg:mx-[20px] flex lg:flex-wrap md:flex-wrap justify-center ${styles.trueAIflex}`}>
             {/* here the Card comes */}
             <AICard 
               AIheading="Exclusive Rights"
@@ -263,7 +263,7 @@ const Home = () => {
         </section>
         {/* Get in Touch */}
         <section className="mt-[100px]">
-          <div className={`flex xl:items-center xl:flex-row lg:flex-col md:flex-col md:items-center ${styles.flexAt248}`}>
+          <div className={`flex xl:items-center xl:flex-row lg:flex-col md:flex-col ${styles.flexAt248}`}>
             <div className={`bg-[#1b1c1e] pt-[5rem] pr-[5rem] pb-[7rem] pl-[5rem] ${styles.paddingAt428}`}>
               <div>
                 <div className="mb-[40px]">

@@ -26,6 +26,7 @@ const config: Config = {
         'gradient-custom-blue': 'linear-gradient(135deg, rgba(3, 177, 249, 0.2) 0%, rgba(63, 189, 241, 0) 100%)',
         "gradient-custom-red": "linear-gradient(135deg, rgba(255, 107, 102, 0.2) 0%, rgba(0, 0, 0, 0) 100%)",
         'gradient-custom-yellow': 'linear-gradient(135deg, rgba(255, 159, 49, 0.15) 0%, rgba(255, 159, 49, 0) 100%)',
+        'gradient-custom-ai': 'linear-gradient(54deg, #0091ff 0, #9cfeff 100%)',
       },
       backgroundOpacity: {
         '15': '0.15', // opacity: 0.15 (15%)
@@ -44,6 +45,25 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      backgroundImage: ['responsive'], // Enable responsive variants if needed
+    },
+  },
+  plugins: [
+    function ({ addUtilities }: {addUtilities: any}) {
+      const newUtilities = {
+        '.custom-text-gradient': {
+          '--gr-4': 'linear-gradient(54deg, #0091ff 0, #9cfeff 100%)',
+          background: 'var(--gr-4)',
+          color: 'transparent',
+          '-webkit-background-clip': 'text',
+          'background-clip': 'text',
+        },
+      };
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 };
 export default config;

@@ -76,7 +76,7 @@ const Vision = () => {
     {/* for mobile version */}
     <div className={`xl:hidden lg:hidden ${styles.blockAt428}`}>
       <div className="flex items-center w-4/5">
-        <div>
+        <div className="mr-[20px]">
         <h3 className="text-[28px] font-[700] my-[20px]">Diversity and Fairness</h3>
         <span className="inline-block text-[16px] my-4 text-[#8a8a8a] transition duration-300 col-span-1">
             When training our AI models, we consider ethical and social
@@ -104,7 +104,7 @@ const Vision = () => {
         </div>
       </div>
       <div className="flex items-center w-4/5">
-        <div>
+        <div className="mr-[20px]">
         <h3 className="text-[28px] font-[700] my-[20px]">Diversity and Fairness</h3>
         <span className="inline-block text-[16px] my-4 text-[#8a8a8a] transition duration-300 col-span-1">
             When training our AI models, we consider ethical and social

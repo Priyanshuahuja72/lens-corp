@@ -1,4 +1,20 @@
 @media (max-width: 428px) {
+  .Navbarmargin {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .lenheading {
+    font-size: 30px;
+    line-height: normal;
+  }
+  .cardHeading {
+    font-size: 30px;
+  }
+  .lenat428{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
     .customHiddenAt428 {
       display: none;
     }
@@ -15,6 +31,10 @@
     .MainCart428 {
       margin-left: 0px;
       margin-right: 0px;
+    }
+    .mainWelcome {
+      width: 100%;
+      margin-bottom: 20px;
     }
     .welComeAt428 {
       width: 100%;
@@ -47,5 +67,11 @@
     }
     .scaledElement {
       transform: scale(1.5);
+    }
+    .trueAIflex {
+      flex-wrap: wrap;
+    }
+    .textsize {
+      font-size: 60px;
     }
 }

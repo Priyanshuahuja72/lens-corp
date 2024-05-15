@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo from "../../public/icons/lensLogo.png";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import styles from "../Custom/MyComponent.module.css"
 //this is the link object
 const links = [
   { name: "Home", href: "/" },
@@ -15,7 +16,7 @@ const Navbar = () => {
  
   return (
     <>
-    <header className="px-20 xl:py-2 lg:py-2 fixed z-20 w-full"  style={{ backdropFilter: 'blur(80px)', WebkitBackdropFilter: 'blur(80px)' }}>
+    <header className={`px-20 xl:py-0 lg:py-2 fixed z-20 w-full ${styles.Navbarmargin}`}  style={{ backdropFilter: 'blur(80px)', WebkitBackdropFilter: 'blur(80px)' }}>
       <div className="flex items-center justify-between">
         {/* it is the image logo */}
         <Image src={Logo} alt="LensLogo" width={80} height={80} />
@@ -24,7 +25,7 @@ const Navbar = () => {
           <div>
             <Link
               href="https://makemyweb.ai/en"
-              className="text-lg font-semibold text-gray transition duration-100 hover:text-[#fff]"
+              className="text-[16px] font-normal text-white transition duration-100 hover:font-semibold"
             >
               MakeMyWeb
             </Link>
@@ -33,7 +34,7 @@ const Navbar = () => {
             <div key={idx}>
               {pathname === link.href ? (
                 <Link
-                  className="text-lg font-semibold"
+                  className="text-lg font-normal custom-text-gradient"
                   href={link.href}
                 >
                   {link.name}
@@ -41,7 +42,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   href={link.href}
-                  className="text-lg font-semibold text-gray transition duration-100 hover:text-[#fff]"
+                  className="text-[16px] font-normal text-white transition duration-100 hover:font-semibold"
                 >
                   {link.name}
                 </Link>
@@ -51,6 +52,7 @@ const Navbar = () => {
           <div>
           </div>
         </nav>
+        {/* for the responsive work */}
         <button 
         className="lg:hidden text-gray-600 hover:text-white focus:outline-none"
 
