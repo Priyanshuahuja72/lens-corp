@@ -38,8 +38,8 @@ const Card:React.FC<CardProps> = ({CardNumber, CardHeading, CardContent, CardBor
         </div>
         {/* text section */}
         <div
-          className={`xl:text-[40px] lg:text-[35px] md:text-[35px] font-semibold ml-[-20px] mt-[9px] ${CardTextColor} transition-all duration-500 ease-in-out ${
-            hover ? "ml-[0px] text-gray" : ""
+          className={`xl:text-[40px] lg:text-[35px] md:text-[35px] font-semibold ml-[-20px] mt-[9px]  transition-all duration-500 ease-in-out ${
+            hover ? "ml-[0px] text-gray" : `${CardTextColor}`
           }`}
         >
           {CardHeading}

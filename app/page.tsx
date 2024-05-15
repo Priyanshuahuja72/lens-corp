@@ -274,7 +274,7 @@ const Home = () => {
               {/* input section */}
               <div className="bg-[#0b0b0b] rounded-[26px] px-[10px] py-[10px] flex justify-center">
                 <input type="text" placeholder="Enter Your Email" className="w-[80%] px-[8px] py-[8px] text-[14px] border-[1px] border-solid border-transparent bg-[#000]" />
-                <button className="px-4 py-2 text-base font-medium rounded-full bg-blue-900 text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 cursor-pointer w-40">Request Demo</button>
+                <button className="px-4 py-2 text-base font-medium rounded-full bg-semiblue text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 cursor-pointer w-40">Request Demo</button>
               </div>
             </div>
             {/* image section */}
