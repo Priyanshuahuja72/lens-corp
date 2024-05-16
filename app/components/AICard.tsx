@@ -13,8 +13,9 @@ interface AICardProps {
 const AICard: React.FC<AICardProps> = ({AIheading, AImage, AIData, AIAnimation, borderColor, gradient}) => {
   const [AIhover, setAIhover] = useState(false);
   return (
+    <div className="relative">
     <div 
-    className={`bg-[#1b1c1e] p-[20px] rounded-[20px]  w-[335px] h-[450px] m-[10px] flex justify-between flex-col ${AIhover ? `bg-transparent ${gradient} border-[1px] ${borderColor} border-solid` : ""}`}
+    className={`bg-[#1b1c1e] p-[20px] rounded-[20px]  xl:w-[335px] xl:h-[450px] lg:w-[20rem] md:w-[300px] md:h-[460px] m-[10px] flex justify-between flex-col ${AIhover ? `bg-transparent ${gradient} border-[1px] ${borderColor} border-solid` : ""}`}
     onMouseEnter={() => setAIhover(true)}
     onMouseLeave={() => setAIhover(false)}
     >
@@ -24,9 +25,10 @@ const AICard: React.FC<AICardProps> = ({AIheading, AImage, AIData, AIAnimation, 
         <Image src={AImage} alt="GreenAi" className={`w-[251px] h-[150px] ${AIhover ? "" : `animate-animate-substance-1 ${AIAnimation}`}`} />
       </div>
       {/* conten Section */}
-      <div className=" mt-[20px] font-[100] text-gray text-[17px] text-left">
-       {AIData}
+      <div className=" mt-[20px]">
+        <span className="font-[100] text-gray text-[16px] text-left">{AIData}</span>
       </div>
+    </div>
     </div>
   );
 };

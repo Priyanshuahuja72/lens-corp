@@ -4,7 +4,6 @@ import Image from "next/image";
 import Logo from "../../public/icons/lensLogo.png";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import styles from "../Custom/MyComponent.module.css"
 //this is the link object
 const links = [
   { name: "Home", href: "/" },
@@ -16,7 +15,7 @@ const Navbar = () => {
  
   return (
     <>
-    <header className={`px-20 xl:py-0 lg:py-2 fixed z-20 w-full ${styles.Navbarmargin}`}  style={{ backdropFilter: 'blur(80px)', WebkitBackdropFilter: 'blur(80px)' }}>
+    <header className={`px-20 xl:py-0 lg:py-2 fixed z-20 w-full`}  style={{ backdropFilter: 'blur(80px)', WebkitBackdropFilter: 'blur(80px)' }}>
       <div className="flex items-center justify-between">
         {/* it is the image logo */}
         <Image src={Logo} alt="LensLogo" width={80} height={80} />

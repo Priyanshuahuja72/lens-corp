@@ -2,11 +2,10 @@ import React from "react";
 import PeapleIcon from "./PeapleIcon";
 import RegularIcon from "./RegularIcon";
 import EthicsIcon from "./EthicsIcon";
-import styles from "../Custom/MyComponent.module.css"
 const Vision = () => {
   return (
     <>
-    <div className={`xl:block lg:block md:hidden ${styles.hiddenAt428}`}>
+    <div className='xl:block lg:block md:hidden'>
       <div className="grid grid-cols-3">
         <div>
           <h3 className="text-[28px] font-[700] my-[20px]">
@@ -38,7 +37,7 @@ const Vision = () => {
           <span className="block w-[0%] h-[85%] border-l-2 border-dashed border-[#8a8a8a] transform translate-x-7.5 mx-auto"></span>
         </div>
         {/* second section */}
-        <div className="col-span-1">
+        <div className="col-span-1 lg:w-[160%]">
           <h3 className="text-[28px] font-[700] my-[20px]">
             Diversity & Fairness
           </h3>
@@ -74,7 +73,7 @@ const Vision = () => {
       </div>
     </div>
     {/* for mobile version */}
-    <div className={`xl:hidden lg:hidden ${styles.blockAt428}`}>
+    <div className={`xl:hidden lg:hidden md:block`}>
       <div className="flex items-center w-4/5">
         <div className="mr-[20px]">
         <h3 className="text-[28px] font-[700] my-[20px]">Diversity and Fairness</h3>
@@ -86,12 +85,12 @@ const Vision = () => {
         </span>
         </div>
         <div>
-          <span className={`inline-block z-20 rounded-[40px] border-4 border-[#8a8a8a] p-[4px] ${styles.hiddenAt428}`}><PeapleIcon/></span>
+          <span className={`inline-block z-20 rounded-[40px] border-4 border-[#8a8a8a] p-[4px]`}><PeapleIcon/></span>
         </div>
       </div>
       <div className="flex items-center w-4/5">
       <div>
-          <span className={`inline-block z-20 rounded-[40px] border-4 border-[#8a8a8a] p-[4px] ${styles.hiddenAt428}`}><RegularIcon/></span>
+          <span className={`inline-block z-20 rounded-[40px] border-4 border-[#8a8a8a] p-[4px]`}><RegularIcon/></span>
         </div>
         <div>
         <h3 className="text-[28px] font-[700] my-[20px]">Diversity and Fairness</h3>
@@ -114,7 +113,7 @@ const Vision = () => {
         </span>
         </div>
         <div>
-          <span className={`inline-block z-20 rounded-[40px] border-4 border-[#8a8a8a] p-[4px] ${styles.hiddenAt428}`}><EthicsIcon/></span>
+          <span className={`inline-block z-20 rounded-[40px] border-4 border-[#8a8a8a] p-[4px]`}><EthicsIcon/></span>
         </div>
       </div>
     </div>

@@ -3,15 +3,14 @@ import Image from "next/image";
 import FacebookIcon from "./FacebookIcon";
 import InstaIcon from "./InstaIcon";
 import LinkedinIcon from "./LinkedinIcon";
-import styles from "../Custom/MyComponent.module.css";
 import LogoImage from "../../public/icons/lensLogo.png";
 
 const Footer = () => {
   return (
     <>
-      <div className={`py-4 px-4 ${styles.paddingAt428}`}>
-        <div className={`flex xl:justify-around lg:justify-between md:justify-between ${styles.flexAt248}`}>
-          <div className={`flex flex-col ${styles.alignAt428}`}>
+      <div className={`py-4 xl:mx-40 lg:mx-40 md:mx-20`}>
+        <div className={`flex justify-between xl:flex-row lg:flex-row md:flex-row md:items-start sm:flex-col xl:items-start lg:items-start sm:items-center`}>
+          <div className={`flex flex-col xl:items-start lg:items-start md:items-start sm:items-center`}>
             <Image src={LogoImage} alt="Logo" width={80} height={70} />
             <span className="my-4">Tomorrow Vision, Today!</span>
             <div className="flex">
@@ -20,18 +19,18 @@ const Footer = () => {
               <LinkedinIcon />
             </div>
           </div>
-          <div className={`flex flex-col mt-4 ${styles.alignAt428}`}>
+          <div className={`flex flex-col mt-4`}>
             <span className="text-16 font-600 mb-4">SITEMAP</span>
             <ul>
-              <li className="pb-1 cursor-pointer hover:custom-text-gradient">MakeMyWeb</li>
-              <li className="pb-1 cursor-pointer hover:custom-text-gradient">Products</li>
-              <li className="pb-1 cursor-pointer hover:custom-text-gradient">Blogs</li>
-              <li className="pb-1 cursor-pointer hover:custom-text-gradient">Life of LENS</li>
-              <li>Services</li>
+              <li className="pb-2 cursor-pointer hover:custom-text-gradient">MakeMyWeb</li>
+              <li className="pb-2 cursor-pointer hover:custom-text-gradient">Products</li>
+              <li className="pb-2 cursor-pointer hover:custom-text-gradient">Blogs</li>
+              <li className="pb-2 cursor-pointer hover:custom-text-gradient">Life of LENS</li>
+              <li className="cursor-pointer hover:custom-text-gradient">Services</li>
             </ul>
           </div>
-          <div className={`flex flex-col mt-4 ${styles.alignAt428}`}>
-            <span className={`text-16 font-600 mb-4 ${styles.textAt428}`}>CONNECT</span>
+          <div className={`flex flex-col mt-4`}>
+            <span className={`text-16 font-600 mb-4`}>CONNECT</span>
             <ul>
               <li className="pb-1 cursor-pointer hover:custom-text-gradient">+1-517-9300-792</li>
               <li className="pb-1 cursor-pointer hover:custom-text-gradient">+91-9990-736-796</li>
@@ -39,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={`flex justify-between bg-[#242424] py-7 px-12 ${styles.flexAt248}`}>
+      <div className={`flex justify-between bg-[#242424] py-7 px-12`}>
         <span className="text-white">2023 LENS, Inc. All rights reserved.</span>
         <div className="flex">
           <span className="text-white mr-4">Code of conduct</span>

@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import trueAImage from "../../public/image/vectorAi.webp";
-import styles from "../Custom/MyComponent.module.css"
 import Button from "./Button"
 const TrueAI = () => {
     const clipPathStyle = {
@@ -12,13 +11,13 @@ const TrueAI = () => {
     <section className="pt-[180px] bg-[#000] mb-[80px] ">
       <div className=" pt-[100px] pb-[60px] flex justify-between items-center relative bg-[#242424] w-full h-550px z-10 clip-path-custom" style={clipPathStyle}>
         {/* first Image */}
-        <div className={`ml-[80px] xl:block lg:hidden md:hidden ${styles.displayAt428}`}>
+        <div className={`ml-[80px] xl:block lg:hidden md:hidden`}>
           <Image src={trueAImage} alt="TrueImage" width={330} height={330} />
         </div>
         {/* second Content */}
-        <div className="text-center xl:ml-0 lg:ml-[100px] md:ml-[30px]">
+        <div className="text-center xl:ml-0 lg:ml-[12rem] flex flex-col md:ml-[40px]">
           {/* first content */}
-          <div className={`flex text-[64px] text-white text-4xl font-bold capitalize gap-4 items-center mx-auto mb-[40px] ${styles.fontAt428} ${styles.marginAt428}`}>
+          <div className={`flex xl:text-[64px] lg:text-[64px] md:text-[44px] text-white font-bold capitalize gap-4 items-center mx-auto mb-[40px]`}>
             <div>Meet</div>
             <div>
               <div>True-AI</div>
@@ -33,7 +32,7 @@ const TrueAI = () => {
             <div>the Future of AI | Power to EDIT</div>
           </div>
           {/* fourth Content */}
-          <div className={`text-white text-center text-xs capitalize mb-4 ${styles.marginAt428}`}>
+          <div className={`text-white text-center text-xs capitalize mb-4`}>
             Based On your website & traffic trends, Tru-AI optimises your
             website
           </div>
@@ -43,7 +42,7 @@ const TrueAI = () => {
           </div>
         </div>
         {/* thuird  Video */}
-        <div className={`w-[500px] md:w-[300px] ${styles.displayAt428}`}>
+        <div className={`xl:w-[500px] lg:w-[350px] md:w-[33%]`}>
           <video
             className="rounded-tl-full rounded-bl-full"
             autoPlay

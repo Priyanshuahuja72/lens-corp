@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import styles from "../Custom/MyComponent.module.css"
 // Created an Interface for the Card
 interface CardProps {
     CardNumber: string,
@@ -39,7 +38,7 @@ const Card:React.FC<CardProps> = ({CardNumber, CardHeading, CardContent, CardBor
         </div>
         {/* text section */}
         <div
-          className={`xl:text-[40px] lg:text-[25px] md:text-[35px] font-semibold ml-[-20px] mt-[9px]  transition-all duration-500 ease-in-out ${styles.cardHeading} ${
+          className={`font-semibold text-[32px] ml-[-20px] mt-[9px]  transition-all duration-500 ease-in-out ${
             hover ? "ml-[0px] text-gray" : `${CardTextColor}`
           }`}
         >
