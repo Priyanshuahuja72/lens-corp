@@ -19,7 +19,7 @@ const Footer = () => {
               <LinkedinIcon />
             </div>
           </div>
-          <div className={`flex flex-col mt-4`}>
+          <div className={`flex flex-col mt-4 xl:text-left lg:text-left md:text-left sm:text-center`}>
             <span className="text-16 font-600 mb-4">SITEMAP</span>
             <ul>
               <li className="pb-2 cursor-pointer hover:custom-text-gradient">MakeMyWeb</li>
@@ -29,7 +29,7 @@ const Footer = () => {
               <li className="cursor-pointer hover:custom-text-gradient">Services</li>
             </ul>
           </div>
-          <div className={`flex flex-col mt-4`}>
+          <div className={`flex flex-col mt-4 xl:text-left lg:text-left md:text-left sm:text-center`}>
             <span className={`text-16 font-600 mb-4`}>CONNECT</span>
             <ul>
               <li className="pb-1 cursor-pointer hover:custom-text-gradient">+1-517-9300-792</li>
@@ -39,9 +39,9 @@ const Footer = () => {
         </div>
       </div>
       <div className={`flex justify-between bg-[#242424] py-7 px-12`}>
-        <span className="text-white">2023 LENS, Inc. All rights reserved.</span>
+        <span className="text-white">2023 <span className="text-gray">LENS, Inc.</span> All rights reserved.</span>
         <div className="flex">
-          <span className="text-white mr-4">Code of conduct</span>
+          <span className="text-gray mr-4">Code of conduct</span>
           <span className="text-white">Sustainability Goals</span>
         </div>
       </div>

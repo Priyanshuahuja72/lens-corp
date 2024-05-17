@@ -32,14 +32,14 @@ const Home = () => {
           }}
         ></div>
         {/* the cart div comes here */}
-        <div className={`my-[30px] mx-[60px]`}>
+        <div className={`my-[30px] xl:mx-[60px] lg:mx-[60px] md:mx-[60px] sm:mx-[20px]`}>
           {/* this is the entire div */}
           <div 
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          className={`transition-all duration-200 ease-in-out flex xl:flex-row xl:items-start lg:flex-col-reverse lg:items-center md:flex-col-reverse md:items-center w-[90%] mx-auto bg-[#1b1c1e] p-[40px] rounded-xl ${hover ? 'transform scale-105 transition-all duration-200 ease-in-out': ''}`}>
+          className={`transition-all duration-200 ease-in-out flex xl:flex-row xl:items-start lg:flex-col-reverse lg:items-center md:flex-col-reverse md:items-center sm:flex-col-reverse sm:items-center xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-[100%] mx-auto bg-[#1b1c1e] p-[40px] rounded-xl ${hover ? 'transform scale-105 transition-all duration-200 ease-in-out': ''}`}>
             {/*--left-section---*/}
-            <div className={`xl:w-[80%] xl:text-left xl:mt-0 lg:mt-6 lg:w-[100%] lg:text-center md:mt-6 md:w-[100%] md:text-center `}>
+            <div className={`xl:w-[80%] xl:text-left xl:mt-0 lg:mt-6 lg:w-[100%] lg:text-center md:mt-6 md:w-[100%] sm:mt-6 md:text-center sm:text-center `}>
               <div>
                 <h1 className={`text-primary-color text-4xl font-extrabold mb-8`}>
                   Welcome to LENS
@@ -76,7 +76,7 @@ const Home = () => {
         ></div>
         {/* the para testing */}
         <div className={`xl:w-[70%] lg:w-[70%] md:w-[100%] ml-auto mr-auto text-center`}>
-          <p className={`my-[80px] mx-auto text-center xl:text-5xl xl:font-medium lg:text-[58px] lg:leading-normal lg:font-medium md:text-[58px] md:leading-normal md:font-medium`}>
+          <p className={`my-[80px] mx-auto text-center xl:text-5xl xl:font-medium lg:text-[58px] lg:leading-normal lg:font-medium md:text-[58px] sm:text-[45px] md:leading-normal md:font-medium`}>
             We provide Artificial Intelligence Services
           </p>
         </div>
@@ -112,7 +112,7 @@ const Home = () => {
             </div>
             {/* content heading section */}
             <div className="mx-auto">
-              <div className={`text-[#fff] text-center text-[60px] font-medium leading-normal mb-0 xl:w-[80%] lg:w-[65%] mx-auto`}>
+              <div className={`text-[#fff] text-center xl:text-[60px] lg:text-[60px] md:text-[60px] sm:text-[50px] font-medium leading-normal mb-0 xl:w-[80%] lg:w-[65%] mx-auto`}>
                 AI-driven solutions backed by science
               </div>
               {/* content para */}
@@ -123,7 +123,7 @@ const Home = () => {
                 robust solutions in the market.
               </p>
               {/* list section */}
-              <div className={`flex items-center justify-around w-[80%] mx-auto`}>
+              <div className={`flex xl:items-center lg:items-center md:items-center sm:items-start justify-around w-[80%] mx-auto xl:flex-row lg:flex-row md:flex-row sm:flex-col`}>
                 {/* first list */}
                 <div>
                   <ul>
@@ -196,7 +196,7 @@ const Home = () => {
         </section>
         {/* driven Card section */}
         <section className="mt-[80px]">
-          <div className={`flex xl:flex-nowrap lg:flex-wrap md:flex-wrap xl:justify-between md:justify-center lg:justify-between`}>
+          <div className={`flex xl:flex-nowrap lg:flex-wrap md:flex-wrap sm:flex-wrap xl:justify-between md:justify-center lg:justify-between`}>
             {/* here the Card comes */}
             <AICard 
               AIheading="Exclusive Rights"
@@ -256,24 +256,24 @@ const Home = () => {
               transparency to typically opaque AI models and their predictions.
             </p>
           </div>
-          <div className="w-[80%] ml-auto">
+          <div className="xl:w-[80%] lg:w-[80%] md:w-[80%] sm:w-[90%] ml-auto">
             <Vision />
           </div>
         </section>
         {/* Get in Touch */}
         <section className="mt-[100px]">
-          <div className={`flex xl:flex-row lg:flex-row md:flex-col md:items-center`}>
-            <div className={`bg-[#1b1c1e] pt-[5rem] pr-[5rem] pb-[7rem] pl-[5rem]`}>
+          <div className={`flex xl:flex-row lg:flex-row md:flex-col sm:flex-col md:items-center`}>
+            <div className={`bg-[#1b1c1e] pt-[5rem] xl:pr-[5rem] pb-[7rem] xl:pl-[5rem] lg:px-[5rem] md:px-[5rem] sm:px-[2rem]`}>
               <div>
                 <div className="mb-[40px]">
-                  <h2 className={`text-[64px] xl:w-[80%] lg:w-[100%] md:w-[80%] font-semibold leading-none`}>Get in touch with us</h2>
+                  <h2 className={`xl:text-[64px] lg:text-[64px] md:text-[64px] sm:text-[50px] xl:w-[80%] lg:w-[100%] md:w-[80%] sm:w-[100%] font-semibold leading-none`}>Get in touch with us</h2>
                 </div>
                 <p className="text-[18px] mb-[40px]">Send your enquiry now!</p>
               </div>
               {/* input section */}
               <div className="bg-[#0b0b0b] rounded-[26px] px-[10px] py-[10px] flex justify-center">
-                <input type="text" placeholder="Enter Your Email" className="w-[80%] px-[8px] py-[8px] text-[14px] border-[1px] border-solid border-transparent bg-[#000]" />
-                <button className="xl:text-[14px] lg:text-[14px] md:text-[12px] px-4 py-2 text-base font-medium rounded-full bg-semiblue text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 cursor-pointer w-40">Request Demo</button>
+                <input type="text" placeholder="Enter Your Email" className="xl:w-[80%] lg:w-[80%] md:w-[80%] sm:w-[80%] xl:px-[8px] xl:py-[8px] lg:px-[8px] lg:py-[8px] sm:px-[4px] sm:py-[4px] text-[14px] border-[1px] border-solid border-transparent bg-[#000]" />
+                <button className="xl:text-[14px] lg:text-[14px] md:text-[12px] sm:text-[12px] px-4 py-2 text-base font-medium rounded-full bg-semiblue text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 cursor-pointer w-40">Request Demo</button>
               </div>
             </div>
             {/* image section */}

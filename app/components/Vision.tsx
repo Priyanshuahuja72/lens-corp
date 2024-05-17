@@ -5,7 +5,7 @@ import EthicsIcon from "./EthicsIcon";
 const Vision = () => {
   return (
     <>
-    <div className='xl:block lg:block md:hidden'>
+    <div className='xl:block lg:block md:hidden sm:hidden'>
       <div className="grid grid-cols-3">
         <div>
           <h3 className="text-[28px] font-[700] my-[20px]">

@@ -11,13 +11,13 @@ const TrueAI = () => {
     <section className="pt-[180px] bg-[#000] mb-[80px] ">
       <div className=" pt-[100px] pb-[60px] flex justify-between items-center relative bg-[#242424] w-full h-550px z-10 clip-path-custom" style={clipPathStyle}>
         {/* first Image */}
-        <div className={`ml-[80px] xl:block lg:hidden md:hidden`}>
+        <div className={`ml-[80px] xl:block lg:hidden md:hidden sm:hidden`}>
           <Image src={trueAImage} alt="TrueImage" width={330} height={330} />
         </div>
         {/* second Content */}
         <div className="text-center xl:ml-0 lg:ml-[12rem] flex flex-col md:ml-[40px]">
           {/* first content */}
-          <div className={`flex xl:text-[64px] lg:text-[64px] md:text-[44px] text-white font-bold capitalize gap-4 items-center mx-auto mb-[40px]`}>
+          <div className={`flex xl:text-[64px] lg:text-[64px] md:text-[44px] sm:text-[40px] text-white font-bold capitalize gap-4 items-center mx-auto mb-[40px]`}>
             <div>Meet</div>
             <div>
               <div>True-AI</div>
@@ -42,7 +42,7 @@ const TrueAI = () => {
           </div>
         </div>
         {/* thuird  Video */}
-        <div className={`xl:w-[500px] lg:w-[350px] md:w-[33%]`}>
+        <div className={`xl:w-[500px] lg:w-[350px] md:w-[33%] xl:block lg:block md:block sm:hidden`}>
           <video
             className="rounded-tl-full rounded-bl-full"
             autoPlay
