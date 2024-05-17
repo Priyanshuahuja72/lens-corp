@@ -13,7 +13,7 @@ const config: Config = {
         'xl': '1440px',
         'lg': '1024px',
         'md': '768px',
-        'sm':'375px',
+        'sm':'320px',
       },
       colors: {
         "dark": "#232A3C",
