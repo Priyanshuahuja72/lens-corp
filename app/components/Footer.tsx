@@ -38,9 +38,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={`flex justify-between bg-[#242424] py-7 px-12`}>
+      <div className={`flex xl:flex-row lg:flex-row md:flex-row sm:flex-col justify-between bg-[#242424] py-7 px-12`}>
         <span className="text-white">2023 <span className="text-gray">LENS, Inc.</span> All rights reserved.</span>
-        <div className="flex">
+        <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col">
           <span className="text-gray mr-4">Code of conduct</span>
           <span className="text-white">Sustainability Goals</span>
         </div>

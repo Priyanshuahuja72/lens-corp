@@ -10,17 +10,19 @@ const links = [
   { name: "Company", href: "/Company" },
   { name: "Blog", href: "/Blog" },
 ];
-const Navbar = () => {
+const Navbar = ({NavbarOpen, setNavbarOpen}: {setNavbarOpen: any, NavbarOpen: any}) => {
   const pathname = usePathname();
- 
+  const openSidebar = () => {
+      setNavbarOpen(!NavbarOpen);
+  };
   return (
     <>
-    <header className={`px-20 xl:py-0 lg:py-2 fixed z-20 w-full`}  style={{ backdropFilter: 'blur(80px)', WebkitBackdropFilter: 'blur(80px)' }}>
+    <header className={`xl:px-20 lg:px-20 md:px-20 sm:px-5 xl:py-0 lg:py-2 fixed z-[30] w-full`}  style={{ backdropFilter: 'blur(80px)', WebkitBackdropFilter: 'blur(80px)' }}>
       <div className="flex items-center justify-between">
         {/* it is the image logo */}
         <Image src={Logo} alt="LensLogo" width={80} height={80} />
         {/* it is for the link */}
-        <nav className="hidden gap-12 lg:flex 2xl:ml-16">
+        <nav className="sm:hidden gap-12 lg:flex md:flex-row 2xl:ml-16">
           <div>
             <Link
               href="https://makemyweb.ai/en"
@@ -54,7 +56,7 @@ const Navbar = () => {
         {/* for the responsive work */}
         <button 
         className="lg:hidden text-gray-600 hover:text-white focus:outline-none"
-
+        onClick={openSidebar}
         >
           <svg
             className="w-6 h-6"

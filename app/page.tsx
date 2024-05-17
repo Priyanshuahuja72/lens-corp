@@ -12,6 +12,8 @@ import Map from "../public/image/Map.webp"
 import Footer from "./components/Footer";
 import Button from "./components/Button";
 import CardData from "../app/data/CardData";
+import SideBar from "./components/SideBar";
+import Navbar from "./components/Navbar";
 // AI Image Component 
 import GreenAI from "../public/image/greenAI.webp";
 import BlueAI from "../public/image/blueAI.webp";
@@ -20,11 +22,15 @@ import YellowAI from "../public/image/yellowAI.webp";
 
 const Home = () => {
   const [hover, setHover] = useState(false);
+  const [NavbarOpen, setNavbarOpen] = useState(false);
   return (
+    <>
+    <Navbar setNavbarOpen={setNavbarOpen} NavbarOpen={NavbarOpen}/>
+    <SideBar NavbarOpen={NavbarOpen}/>
     <div>
       <Hero />
       <div className="mt-[40px]">
-        <h1 className={`text-center xl:text-[70px] lg:text-[70px] md:text-[64px] font-semibold`}>About Us</h1>
+        <h1 className={`text-center xl:text-[70px] lg:text-[70px] md:text-[64px] sm:text-[50px] font-semibold`}>About Us</h1>
         <div
           className="w-40 h-2 rounded-full bg-gradient-to-r mx-auto"
           style={{
@@ -289,6 +295,7 @@ const Home = () => {
         <Footer/>
       </div>
     </div>
+    </>
   );
 };
 
