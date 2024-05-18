@@ -289,13 +289,13 @@ const Home = () => {
               </div>
             {/* Bog Card heading section */}
             <div className="xl:w-[70%] lg:w-[80%] md:w-[90%] sm:w-[80%] mx-auto my-9 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-5">
-            {BlogCardData.map((item, id) => (
+            {BlogCardData.map((item, i) => (
               <BlogCard
                 isNew={item.Date}
                 heading={item.heading}
                 para={item.para}
-                isLast={id === BlogCardData.length - 1}
-                key={id}
+                isLast={i === BlogCardData.length - 1}
+                key={i}
               />
             ))}
             </div>
