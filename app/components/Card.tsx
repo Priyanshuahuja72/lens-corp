@@ -13,7 +13,7 @@ const Card:React.FC<CardProps> = ({CardNumber, CardHeading, CardContent, CardBor
   const [hover, setHover] = useState(false);
   return (
     <div
-      className={`bg-[#1b1c1e] p-[25px] rounded-[10px] transition-all duration-500 ease-in-out ${
+      className={`bg-[#1b1c1e] p-[25px] rounded-[10px] transition-all duration-200 ease-in-out ${
         hover
           ? `bg-transparent border-[1px] ${CardBorderColor} border-solid`
           : ""
@@ -29,7 +29,7 @@ const Card:React.FC<CardProps> = ({CardNumber, CardHeading, CardContent, CardBor
             0
           </span>
           <span
-            className={`text-gray-700 text-[80px] font-semibold leading-tight opacity-[0.2] transition-all duration-500 ease-in-out ${
+            className={`text-gray-700 text-[80px] font-semibold leading-tight opacity-[0.2] transition-all duration-200 ease-in-out ${
               hover ? `${CardTextColor} opacity-[2]` : ""
             }`}
           >
@@ -38,7 +38,7 @@ const Card:React.FC<CardProps> = ({CardNumber, CardHeading, CardContent, CardBor
         </div>
         {/* text section */}
         <div
-          className={`font-semibold text-[32px] ml-[-20px] mt-[9px]  transition-all duration-500 ease-in-out ${
+          className={`font-semibold text-[32px] ml-[-20px] mt-[9px]  transition-all duration-200 ease-in-out ${
             hover ? "ml-[0px] text-gray" : `${CardTextColor}`
           }`}
         >

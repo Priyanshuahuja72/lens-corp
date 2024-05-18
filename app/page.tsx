@@ -14,6 +14,8 @@ import Button from "./components/Button";
 import CardData from "../app/data/CardData";
 import SideBar from "./components/SideBar";
 import Navbar from "./components/Navbar";
+import BlogCard from "./components/BlogCard";
+import BlogCardData from "./data/BlogCardData";
 // AI Image Component 
 import GreenAI from "../public/image/greenAI.webp";
 import BlueAI from "../public/image/blueAI.webp";
@@ -256,7 +258,7 @@ const Home = () => {
               AI for Social Good
             </div>
             {/* paragraph section */}
-            <p className="text-[#8a8a8a] text-center text-[25px] leading-normal my-16 xl:w-[80%] lg:w-[65%] mx-auto">
+            <p className="text-[#8a8a8a] text-center text-[25px] leading-normal my-16 xl:w-[70%] lg:w-[65%] mx-auto">
               Explainable AI (XAI) is an emerging subject of machine learning
               research that refers to strategies that try to provide
               transparency to typically opaque AI models and their predictions.
@@ -264,6 +266,42 @@ const Home = () => {
           </div>
           <div className="xl:w-[80%] lg:w-[80%] md:w-[80%] sm:w-[90%] ml-auto">
             <Vision />
+          </div>
+        </section>
+        {/* our blog section */}
+        <section>
+          <div className="my-40">
+            {/* heading section */}
+            <div className="text-center mb-9">
+            <div className="text-[30px] font-semibold leading-normal uppercase">
+              Our Blogs
+            </div>
+            <div
+              className="w-20 h-[4px] rounded-full bg-gradient-to-r mx-auto"
+              style={{
+                backgroundImage: `linear-gradient(54deg, #0091ff, #9cfeff)`,
+              }}
+            ></div>
+            </div>
+            {/* Blog Card heading section */}
+              <div className="text-center xl:w-[65%] lg:w-[65%] md:w-[50%] mx-auto">
+                  <h1 className="text-[58px] font-[500]">Inhouse Mindscape</h1>
+              </div>
+            {/* Bog Card heading section */}
+            <div className="xl:w-[70%] lg:w-[80%] md:w-[90%] sm:w-[80%] mx-auto my-9 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-5">
+            {BlogCardData.map((item, i) => (
+              <BlogCard
+                isNew={item.Date}
+                heading={item.heading}
+                para={item.para}
+                isLast={i === BlogCardData.length - 1}
+              />
+            ))}
+            </div>
+            {/* button of Explore More */}
+            <div className="text-center">
+            <Button text="Explore More"/>
+            </div>
           </div>
         </section>
         {/* Get in Touch */}

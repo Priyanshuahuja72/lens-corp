@@ -21,9 +21,13 @@ const config: Config = {
         "green": "#01C99B",
         "blue": "#3FBDF1",
         "red": "#FF605F",
+        "orangered":"#ff5d5b",
         "yellow": "#FF9F31",
         "gray": "#707070",
-        "semiblue": "#272e5c"
+        "darkgray": "#828282",
+        "semiblue": "#272e5c",
+        "servicecard": "#1b1c1e",
+        "lightblack": "#242424"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

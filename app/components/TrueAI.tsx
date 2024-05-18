@@ -20,7 +20,7 @@ const TrueAI = () => {
           <div className={`flex xl:text-[64px] lg:text-[64px] md:text-[44px] sm:text-[40px] text-white font-bold capitalize gap-4 items-center mx-auto mb-[40px]`}>
             <div>Meet</div>
             <div>
-              <div>True-AI</div>
+              <div className="bg-gradient-pan">True-AI</div>
               <div></div>
             </div>
           </div>
