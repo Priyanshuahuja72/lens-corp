@@ -9,6 +9,10 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        raleway: ['var(--font-raleway)'],
+        roboto: ['var(--font-roboto)']
+      },
       screens: {
         'xl': '1440px',
         'lg': '1024px',
@@ -24,6 +28,7 @@ const config: Config = {
         "orangered":"#ff5d5b",
         "yellow": "#FF9F31",
         "gray": "#707070",
+        "plusgray": "#585858",
         "darkgray": "#828282",
         "semiblue": "#272e5c",
         "servicecard": "#1b1c1e",
@@ -46,12 +51,39 @@ const config: Config = {
           '0%, 75%, 100%' : {opacity: '0' },
           '25%, 50%': {opacity: '1'}
         },
+        "animate-substance-banner": {
+          '0%': {
+            transform: 'translateX(0)',
+            opacity: '1'
+          },
+          '20%': {
+            transform: 'translateX(0)',
+            opacity: '1'
+          },
+          '54%': {
+            transform: 'translateX(-100%)',
+            opacity: '0'
+          },
+          '56%': {
+            transform: 'translateX(100%)',
+            opacity: '0'
+          },
+          '90%': {
+            transform: 'translateX(0)',
+            opacity: '1'
+          },
+          '100%': {
+            transform: 'translateX(0)',
+            opacity: '1'
+          }
+        }
       },
       animation: {
         'animate-substance-1': "animate-substance ease-in-out 4.5s infinite",
         'animate-substance-2': "animate-substance ease-in-out 5.5s infinite",
         'animate-substance-3': "animate-substance ease-in-out 6s infinite",
         'animate-substance-4': "animate-substance ease-in-out 5.5s infinite",
+        'animate-substance-5': "animate-substance-banner 12s linear infinite"
       },
     },
   },

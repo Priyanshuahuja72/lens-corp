@@ -21,6 +21,10 @@ import GreenAI from "../public/image/greenAI.webp";
 import BlueAI from "../public/image/blueAI.webp";
 import RedAI from "../public/image/redAI.webp";
 import YellowAI from "../public/image/yellowAI.webp";
+import brandOne from "../public/image/brand_one.webp";
+import brandTwo from "../public/image/brand_two.webp";
+import brandThree from "../public/image/brand_three.webp";
+import brandFour from "../public/image/brand_four.webp";
 
 const Home = () => {
   const [hover, setHover] = useState(false);
@@ -32,7 +36,7 @@ const Home = () => {
     <div>
       <Hero />
       <div className="mt-[40px]">
-        <h1 className={`text-center xl:text-[70px] lg:text-[70px] md:text-[64px] sm:text-[50px] font-semibold`}>About Us</h1>
+        <h1 className={`font-raleway text-center xl:text-[70px] lg:text-[70px] md:text-[64px] sm:text-[50px] font-semibold`}>About Us</h1>
         <div
           className="w-40 h-2 rounded-full bg-gradient-to-r mx-auto"
           style={{
@@ -75,7 +79,7 @@ const Home = () => {
       </div>
       {/* this is the sevices section */}
       <div className="mt-[50px]">
-        <h1 className="text-center text-[30px] font-semibold">SERVICES</h1>
+        <h1 className="font-raleway text-center text-[30px] font-semibold">SERVICES</h1>
         <div
           className="w-20 h-2 rounded-full bg-gradient-to-r mx-auto"
           style={{
@@ -108,7 +112,7 @@ const Home = () => {
           <div className="text-center">
             {/* heading section */}
             <div className="mb-[20px]">
-              <div className="text-[#fff] text-center text-[20px] font-semibold tracking-wider uppercase">
+              <div className="text-[#fff] text-center text-[20px] font-semibold tracking-wider uppercase font-raleway">
                 WHY CHOOSE LENS
               </div>
               <div
@@ -131,7 +135,7 @@ const Home = () => {
                 robust solutions in the market.
               </p>
               {/* list section */}
-              <div className={`flex xl:items-center lg:items-center md:items-center sm:items-start justify-around w-[80%] mx-auto xl:flex-row lg:flex-row md:flex-row sm:flex-col`}>
+              <div className={`flex xl:items-center lg:items-center md:items-center sm:items-start justify-around w-[60%] mx-auto xl:flex-row lg:flex-row md:flex-row sm:flex-col`}>
                 {/* first list */}
                 <div>
                   <ul>
@@ -244,7 +248,7 @@ const Home = () => {
         <section className="mt-[80px]">
           <div className="text-center">
             {/* heading section */}
-            <div className="text-[30px] font-[600] leading-normal uppercase">
+            <div className="font-raleway text-[25px] font-[600] leading-normal uppercase">
               Our Vision
             </div>
             <div
@@ -273,7 +277,7 @@ const Home = () => {
           <div className="my-40">
             {/* heading section */}
             <div className="text-center mb-9">
-            <div className="text-[30px] font-semibold leading-normal uppercase">
+            <div className="font-raleway text-[25px] font-semibold leading-normal uppercase">
               Our Blogs
             </div>
             <div
@@ -304,6 +308,67 @@ const Home = () => {
             <Button text="Explore More"/>
             </div>
           </div>
+          {/* we work with amazing clients */}
+          <div className="overflow-hidden">
+            <h1 className="font-raleway text-center text-[32px] font-semibold mb-[80px]">we work with amazing clients</h1>
+          <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col xl:justify-center lg:justify-center md:justify-center sm:items-center overflow-hidden gap-[2rem] xl:animate-animate-substance-5 lg:animate-animate-substance-5 md:animate-animate-substance-5">
+            <div>
+              <Image
+                alt="brand-one"
+                src={brandOne}
+              />
+            </div>
+            <div className="delay-[2s]">
+            <Image
+                alt="brand-two"
+                src={brandTwo}
+              />
+            </div>
+            <div>
+            <Image
+                alt="brand-one"
+                src={brandThree}
+              />
+            </div>
+            <div>
+            <Image
+                alt="brand-one"
+                src={brandFour}
+              />
+            </div>
+          </div>
+          </div>
+        </section>
+        {/* numbers section */}
+        <section>
+          <div className="bg-lightblack flex flex-col justify-center items-center w-full py-[4rem] px-0 mt-[80px]">
+              <div className="text-center text-[32px] mb-[2.5rem]">By the numbers</div>
+              <div className="xl:w-[70%] lg:w-[70%] md:w-[100%]  flex xl:flex-row lg:flex-row md:flex-row sm:flex-col justify-around items-center">
+                  <div className="flex flex-col items-center justify-center gap-[10px]">
+                    <div className="flex justify-center items-baseline gap-[2px]">
+                      <span className="text-center text-[40px] font-bold">15</span>
+                      <span className="text-plusgray font-[700] font-roboto text-center text-[40px]">+</span>
+                    </div>
+                    <div className="text-center text-[18px] w-[70%]">Solutions for Global prices</div>
+                  </div>
+                  <div className="w-[1px] h-[116px] bg-white xl:block lg:block md:block sm:hidden"></div>
+                  <div className="flex flex-col items-center justify-center gap-[10px]">
+                    <div className="flex justify-center items-baseline gap-[2px]">
+                      <span className="text-center text-[40px] font-bold">10</span>
+                      <span className="text-plusgray font-[700] font-roboto text-center text-[40px]">+</span>
+                    </div>
+                    <div className="text-center text-[18px] w-[70%]">University Collaborations</div>
+                  </div>
+                  <div className="w-[1px] h-[116px] bg-white xl:block lg:block md:block sm:hidden"></div>
+                  <div className="flex flex-col items-center justify-center gap-[10px]">
+                    <div className="flex justify-center items-baseline gap-[2px]">
+                      <span className="text-center text-[40px] font-bold">25</span>
+                      <span className="text-plusgray font-[700] font-roboto text-center text-[40px]">+</span>
+                    </div>
+                    <div className="text-center text-[18px] w-[70%]">Employees Worldwide</div>
+                  </div>
+              </div>
+          </div>
         </section>
         {/* Get in Touch */}
         <section className="mt-[100px]">
@@ -311,7 +376,7 @@ const Home = () => {
             <div className={`bg-[#1b1c1e] pt-[5rem] xl:pr-[5rem] pb-[7rem] xl:pl-[5rem] lg:px-[5rem] md:px-[5rem] sm:px-[2rem]`}>
               <div>
                 <div className="mb-[40px]">
-                  <h2 className={`xl:text-[64px] lg:text-[64px] md:text-[64px] sm:text-[50px] xl:w-[80%] lg:w-[100%] md:w-[80%] sm:w-[100%] font-semibold leading-none`}>Get in touch with us</h2>
+                  <h2 className={`xl:text-[64px] lg:text-[64px] md:text-[64px] sm:text-[50px] xl:w-[80%] lg:w-[100%] md:w-[80%] sm:w-[100%] font-semibold leading-none font-raleway`}>Get in touch with us</h2>
                 </div>
                 <p className="text-[18px] mb-[40px]">Send your enquiry now!</p>
               </div>

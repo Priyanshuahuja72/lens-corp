@@ -34,7 +34,7 @@ const BlogCard = ({
             >
               {isNew}
             </span>
-            <h2 className="text-[28px] my-5">{heading}</h2>
+            <h2 className="font-raleway text-[28px] my-5">{heading}</h2>
           </div>
           <div className="flex px-[26px] py-[16px] justify-center items-center rounded-[16px] bg-lightblack">
             <p className="color-darkgray text-[16.5px] leading-[140.7%] my-2 text-darkgray">
